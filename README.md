@@ -12,10 +12,5 @@ Steps to install :
 
 Used Tech :
 
-Node.JS
-React
-Create-react-app
-Express.js
-Tailwind CSS
-Meraki UI
+Node.JS, React, Create-react-app, Express.js, Tailwind CSS, Meraki UI
 
