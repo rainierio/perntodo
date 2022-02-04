@@ -44,15 +44,15 @@ const ListTodo = () => {
                                 <thead>
                                     <tr>
                                         <th
-                                            className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            className="px-5 py-5 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                             Description
                                         </th>
                                         <th
-                                            className="px-2 py-2 border-b-2 border-gray-200 bg-gray-100 text-right pr-10 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            className="px-3 py-2 border-b-2 border-gray-200 bg-gray-100 text-right pr-10 text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                             Edit
                                         </th>
                                         <th
-                                            className="px-2 py-2 border-b-2 border-gray-200 bg-gray-100 text-right pr-10 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            className="px-3 py-2 border-b-2 border-gray-200 bg-gray-100 text-right pr-10 text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                             Delete
                                         </th>
                                     </tr>
@@ -61,19 +61,18 @@ const ListTodo = () => {
                                     {
                                         todos.map(todo => (
                                             <tr key={todo.todo_id}>
-                                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
+                                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-left text-sm tracking-wider ">
                                                     <div className="ml-3">
                                                         <p className="text-gray-900 whitespace-no-wrap text-left">
                                                             {todo.description}
                                                         </p>
                                                     </div>
                                                 </td>
-                                                <td className="px-2 py-2 border-b border-gray-200 bg-white text-right text-sm">
-                                                    <EditTodo />
+                                                <td className="px-3 py-2 border-b-2 border-gray-200 bg-white text-right text-sm tracking wider">
+                                                    <EditTodo todo={todo} />
                                                 </td>
-                                                <td className="px-2 py-2 border-b border-gray-200 bg-white text-right text-sm">
-
-                                                    <button className="px-1 py-1 text-xs font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-red-700 rounded-md sm:mx-2 hover:bg-red-600 focus:outline-none focus:bg-blue-600"
+                                                <td className="px-5 py-2 left-0 border-b border-gray-200 bg-white text-right text-sm">
+                                                    <button className="px-2 py-2 text-xs font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-red-700 rounded-md sm:mx-2 hover:bg-red-600 focus:outline-none focus:bg-blue-600"
                                                         onClick={() => deleteTodo(todo.todo_id)}>
                                                         Delete
 
